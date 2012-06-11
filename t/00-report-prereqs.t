@@ -27,6 +27,7 @@ my @modules = qw(
   MooseX::Getopt
   MooseX::Getopt::Dashes
   MooseX::Traits
+  Mouse::Meta::Attribute::Custom::Trait::Bool
   MouseX::Getopt
   MouseX::Getopt::Dashes
   MouseX::Traits

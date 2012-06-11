@@ -39,6 +39,7 @@ my %WriteMakefileArgs = (
     "MooseX::Getopt" => 0,
     "MooseX::Getopt::Dashes" => 0,
     "MooseX::Traits" => 0,
+    "Mouse::Meta::Attribute::Custom::Trait::Bool" => 0,
     "MouseX::Getopt" => 0,
     "MouseX::Getopt::Dashes" => 0,
     "MouseX::Traits" => 0,
@@ -46,7 +47,7 @@ my %WriteMakefileArgs = (
     "true" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.012",
+  "VERSION" => "0.013",
   "test" => {
     "TESTS" => "t/*.t"
   }
