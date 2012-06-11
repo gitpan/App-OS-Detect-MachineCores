@@ -3,7 +3,7 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.011'; # TRIAL
+  $App::OS::Detect::MachineCores::VERSION = '0.012'; # TRIAL
 }
 
 #  PODNAME: App::OS::Detect::MachineCores
@@ -29,7 +29,7 @@ do {
 has cores => (
     is         => 'ro',
     isa        => 'Int',
-    traits     => [ 'NoGetopt', 'Number' ],
+    traits     => [ 'NoGetopt' ],
     lazy_build => 1,
 );
 has os => (
@@ -81,7 +81,7 @@ App::OS::Detect::MachineCores - Detect how many cores your machine has (OS-indep
 
 =head1 VERSION
 
-version 0.011
+version 0.012
 
 =head1 SYNOPSIS
 

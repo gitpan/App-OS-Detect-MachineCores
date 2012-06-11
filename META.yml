@@ -25,7 +25,7 @@ name: App-OS-Detect-MachineCores
 provides:
   App::OS::Detect::MachineCores:
     file: lib/App/OS/Detect/MachineCores.pm
-    version: 0.011
+    version: 0.012
 requires:
   Any::Moose: 0
   FindBin: 0
@@ -39,5 +39,5 @@ requires:
   strict: 0
   true: 0
   warnings: 0
-version: 0.011
+version: 0.012
 x_authority: cpan:DBR
