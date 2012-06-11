@@ -1,0 +1,41 @@
+#!/usr/bin/env perl
+#  PODNAME: none
+# ABSTRACT: Executable for App::OS::Detect::MachineCores
+use v5.10;
+use strict;
+use warnings;
+
+use FindBin;
+
+use lib "$FindBin::Bin/../lib";
+
+use App::OS::Detect::MachineCores;
+
+print App::OS::Detect::MachineCores->new_with_options->cores;
+
+__END__
+=pod
+
+=encoding utf-8
+
+=head1 NAME
+
+none - Executable for App::OS::Detect::MachineCores
+
+=head1 VERSION
+
+version 0.011
+
+=head1 AUTHOR
+
+Daniel B. <dbr@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Daniel B..
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+

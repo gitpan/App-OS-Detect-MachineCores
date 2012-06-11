@@ -1,0 +1,36 @@
+NAME
+    App::OS::Detect::MachineCores - Detect how many cores your machine has
+    (OS-independently)
+
+VERSION
+    version 0.011
+
+SYNOPSIS
+    On different systems, different approaches are needed to detect the
+    number of cores for that machine.
+
+    This Module is a wrapper around these different approaches.
+
+USAGE
+    This module will install one executable, "mcores", in your bin.
+
+    It is really simple and straightforward:
+
+         usage: mcores [-?i] [long options...]
+             -? --usage --help  Prints this usage information.
+             -i --add-one       add one to the number of cores (useful in scripts)
+
+WARNING
+    Some questions with Dist::Zilla are still open, and although this module
+    attempts to load Mouse instead of Moose, unfortuantely, however, both
+    modules are installed as prerequisites. This will change soon.
+
+AUTHOR
+    Daniel B. <dbr@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Daniel B..
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
