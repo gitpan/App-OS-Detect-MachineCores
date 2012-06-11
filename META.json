@@ -54,8 +54,13 @@
          }
       }
    },
-   "provides" : {},
-   "release_status" : "stable",
+   "provides" : {
+      "App::OS::Detect::MachineCores" : {
+         "file" : "lib/App/OS/Detect/MachineCores.pm",
+         "version" : "0.011"
+      }
+   },
+   "release_status" : "testing",
    "version" : "0.011",
    "x_authority" : "cpan:DBR"
 }

@@ -3,7 +3,7 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.011';
+  $App::OS::Detect::MachineCores::VERSION = '0.011'; # TRIAL
 }
 
 #  PODNAME: App::OS::Detect::MachineCores

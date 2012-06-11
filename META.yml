@@ -22,7 +22,10 @@ meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: App-OS-Detect-MachineCores
-provides: {}
+provides:
+  App::OS::Detect::MachineCores:
+    file: lib/App/OS/Detect/MachineCores.pm
+    version: 0.011
 requires:
   Any::Moose: 0
   FindBin: 0

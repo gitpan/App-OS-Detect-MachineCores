@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-#  PODNAME: none
+#  PODNAME: mcores
 # ABSTRACT: Executable for App::OS::Detect::MachineCores
 use v5.10;
 use strict;
@@ -13,6 +13,7 @@ use App::OS::Detect::MachineCores;
 
 print App::OS::Detect::MachineCores->new_with_options->cores;
 
+
 __END__
 =pod
 
@@ -20,11 +21,28 @@ __END__
 
 =head1 NAME
 
-none - Executable for App::OS::Detect::MachineCores
+mcores - Executable for App::OS::Detect::MachineCores
 
 =head1 VERSION
 
 version 0.011
+
+=head1 SYNOPSIS
+
+On different systems, different approaches are needed to detect the number of cores for that machine.
+
+This Module is a wrapper around these different approaches.
+
+=head1 USAGE
+
+This is the executable to L<App::OS::Detect::MachineCores>, please see the documentation there for usage.
+
+=head1 WARNING
+
+Some questions with Dist::Zilla are still open, and although this module attempts to load L<Mouse> instead of L<Moose>,
+unfortuantely, however, B<both> modules are installed as prerequisites. This will change soon.
+
+=cut
 
 =head1 AUTHOR
 
