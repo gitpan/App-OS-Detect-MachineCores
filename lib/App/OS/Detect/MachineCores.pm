@@ -3,7 +3,7 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.013';
+  $App::OS::Detect::MachineCores::VERSION = '0.015';
 }
 
 #  PODNAME: App::OS::Detect::MachineCores
@@ -16,13 +16,11 @@ use true;
 do {
     with 'MooseX::Getopt';
     with 'MooseX::Getopt::Dashes';
-    with 'MooseX::Traits';
 } if Any::Moose::_is_moose_loaded();
 
 do {
     with 'MouseX::Getopt';
     with 'MouseX::Getopt::Dashes';
-    with 'MouseX::Traits';
 } unless Any::Moose::_is_moose_loaded();
 
 
@@ -52,7 +50,7 @@ sub _build_cores {
     my $self = shift;
     given ($self->os) {
         when ('darwin') { $_ = `sysctl hw.ncpu | awk '{print \$2}'`; chomp; $_ }
-        when ('linux')  { $_ = `grep cores < /proc/cpuinfo | tail -n 1 | awk '{print \$4}'`; chomp; $_ }
+        when ('linux')  { $_ = `grep processor < /proc/cpuinfo | wc -l'`; chomp; $_ }
     }
 }
 
@@ -81,11 +79,11 @@ App::OS::Detect::MachineCores - Detect how many cores your machine has (OS-indep
 
 =head1 VERSION
 
-version 0.013
+version 0.015
 
 =head1 SYNOPSIS
 
-On different systems, different approaches are needed to detect the number of cores for that machine.
+On different system, different approaches are needed to detect the number of cores for that machine.
 
 This Module is a wrapper around these different approaches.
 
@@ -98,6 +96,20 @@ It is really simple and straightforward:
      usage: mcores [-?i] [long options...]
          -? --usage --help  Prints this usage information.
          -i --add-one       add one to the number of cores (useful in scripts)
+
+=head1 SUPPORTED SYSTEMS
+
+=over
+
+=item *
+
+darwin (OSX)
+
+=item *
+
+Linux
+
+=back
 
 =head1 WARNING
 

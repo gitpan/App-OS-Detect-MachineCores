@@ -1,9 +1,8 @@
 NAME
-    App::OS::Detect::MachineCores - Detect how many cores your machine has
-    (OS-independently)
+    mcores - Executable for App::OS::Detect::MachineCores
 
 VERSION
-    version 0.013
+    version 0.015
 
 SYNOPSIS
     On different systems, different approaches are needed to detect the
@@ -12,13 +11,8 @@ SYNOPSIS
     This Module is a wrapper around these different approaches.
 
 USAGE
-    This module will install one executable, "mcores", in your bin.
-
-    It is really simple and straightforward:
-
-         usage: mcores [-?i] [long options...]
-             -? --usage --help  Prints this usage information.
-             -i --add-one       add one to the number of cores (useful in scripts)
+    This is the executable to App::OS::Detect::MachineCores, please see the
+    documentation there for usage.
 
 WARNING
     Some questions with Dist::Zilla are still open, and although this module

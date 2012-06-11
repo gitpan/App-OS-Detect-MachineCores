@@ -21,12 +21,12 @@ my %module_build_args = (
     "ExtUtils::MakeMaker" => "6.30",
     "Module::Build" => "0.3601"
   },
-  "dist_abstract" => "Detect how many cores your machine has (OS-independently)",
+  "dist_abstract" => "Executable for App::OS::Detect::MachineCores",
   "dist_author" => [
     "Daniel B. <dbr\@cpan.org>"
   ],
   "dist_name" => "App-OS-Detect-MachineCores",
-  "dist_version" => "0.013",
+  "dist_version" => "0.015",
   "license" => "perl",
   "module_name" => "App::OS::Detect::MachineCores",
   "recommends" => {},
@@ -36,11 +36,8 @@ my %module_build_args = (
     "FindBin" => 0,
     "MooseX::Getopt" => 0,
     "MooseX::Getopt::Dashes" => 0,
-    "MooseX::Traits" => 0,
-    "Mouse::Meta::Attribute::Custom::Trait::Bool" => 0,
     "MouseX::Getopt" => 0,
     "MouseX::Getopt::Dashes" => 0,
-    "MouseX::Traits" => 0,
     "perl" => "5.010",
     "strict" => 0,
     "true" => 0,
