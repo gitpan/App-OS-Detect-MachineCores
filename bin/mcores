@@ -25,7 +25,7 @@ mcores - Executable for App::OS::Detect::MachineCores
 
 =head1 VERSION
 
-version 0.015
+version 0.020
 
 =head1 SYNOPSIS
 

@@ -26,7 +26,7 @@ my %module_build_args = (
     "Daniel B. <dbr\@cpan.org>"
   ],
   "dist_name" => "App-OS-Detect-MachineCores",
-  "dist_version" => "0.015",
+  "dist_version" => "0.020",
   "license" => "perl",
   "module_name" => "App::OS::Detect::MachineCores",
   "recommends" => {},
@@ -38,6 +38,7 @@ my %module_build_args = (
     "MooseX::Getopt::Dashes" => 0,
     "MouseX::Getopt" => 0,
     "MouseX::Getopt::Dashes" => 0,
+    "MouseX::NativeTraits" => 0,
     "perl" => "5.010",
     "strict" => 0,
     "true" => 0,

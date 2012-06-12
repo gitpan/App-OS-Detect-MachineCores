@@ -33,6 +33,7 @@
             "MooseX::Getopt::Dashes" : "0",
             "MouseX::Getopt" : "0",
             "MouseX::Getopt::Dashes" : "0",
+            "MouseX::NativeTraits" : "0",
             "perl" : "5.010",
             "strict" : "0",
             "true" : "0",
@@ -55,11 +56,11 @@
    "provides" : {
       "App::OS::Detect::MachineCores" : {
          "file" : "lib/App/OS/Detect/MachineCores.pm",
-         "version" : "0.015"
+         "version" : "0.020"
       }
    },
    "release_status" : "stable",
-   "version" : "0.015",
+   "version" : "0.020",
    "x_authority" : "cpan:DBR"
 }
 

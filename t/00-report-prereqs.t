@@ -28,6 +28,7 @@ my @modules = qw(
   MooseX::Getopt::Dashes
   MouseX::Getopt
   MouseX::Getopt::Dashes
+  MouseX::NativeTraits
   Scalar::Util
   Test::CheckDeps
   Test::More

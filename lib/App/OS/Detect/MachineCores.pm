@@ -3,7 +3,7 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.015';
+  $App::OS::Detect::MachineCores::VERSION = '0.020';
 }
 
 #  PODNAME: App::OS::Detect::MachineCores
@@ -50,7 +50,7 @@ sub _build_cores {
     my $self = shift;
     given ($self->os) {
         when ('darwin') { $_ = `sysctl hw.ncpu | awk '{print \$2}'`; chomp; $_ }
-        when ('linux')  { $_ = `grep processor < /proc/cpuinfo | wc -l'`; chomp; $_ }
+        when ('linux')  { $_ = `grep processor < /proc/cpuinfo | wc -l`; chomp; $_ }
     }
 }
 
@@ -79,7 +79,7 @@ App::OS::Detect::MachineCores - Detect how many cores your machine has (OS-indep
 
 =head1 VERSION
 
-version 0.015
+version 0.020
 
 =head1 SYNOPSIS
 
@@ -110,6 +110,16 @@ darwin (OSX)
 Linux
 
 =back
+
+=head1 MOTIVATION
+
+During development of dotfiles for different platforms I was searching for some way to be able to
+transparantly detect the number of available cores and couldn't find one.
+Also it is quite handy to be able to increment the number by simply using a little switch C<<< -i >>>.
+
+Example:
+
+     export TEST_JOBS=`mcores -i`
 
 =head1 WARNING
 
