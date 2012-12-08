@@ -31,21 +31,17 @@ my %WriteMakefileArgs = (
     "bin/mcores",
     "bin/mcores"
   ],
-  "LICENSE" => "perl",
+  "LICENSE" => "unrestricted",
   "NAME" => "App::OS::Detect::MachineCores",
   "PREREQ_PM" => {
-    "Any::Moose" => 0,
     "FindBin" => 0,
-    "MooseX::Getopt" => 0,
-    "MooseX::Getopt::Dashes" => 0,
-    "MouseX::Getopt" => 0,
-    "MouseX::Getopt::Dashes" => 0,
-    "MouseX::NativeTraits" => 0,
+    "Moo" => 0,
+    "MooX::Options" => 0,
     "strict" => 0,
     "true" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.020",
+  "VERSION" => "0.035",
   "test" => {
     "TESTS" => "t/*.t"
   }

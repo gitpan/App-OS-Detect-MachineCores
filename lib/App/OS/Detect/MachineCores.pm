@@ -3,69 +3,59 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.020';
+  $App::OS::Detect::MachineCores::VERSION = '0.035';
 }
 
 #  PODNAME: App::OS::Detect::MachineCores
 # ABSTRACT: Detect how many cores your machine has (OS-independently)
 
-use Any::Moose;
-use 5.010;
 use true;
+use 5.010;
+use strict;
+use warnings;
 
-do {
-    with 'MooseX::Getopt';
-    with 'MooseX::Getopt::Dashes';
-} if Any::Moose::_is_moose_loaded();
+use Moo;
+use MooX::Options skip_options => [qw<os cores>];
 
-do {
-    with 'MouseX::Getopt';
-    with 'MouseX::Getopt::Dashes';
-} unless Any::Moose::_is_moose_loaded();
-
+has os => (
+    is       => 'ro',
+    required => 1,
+    default  => sub { $^O },
+);
 
 has cores => (
-    is         => 'ro',
-    isa        => 'Int',
-    traits     => [ 'NoGetopt' ],
-    lazy_build => 1,
-);
-has os => (
-    is         => 'ro',
-    isa        => 'Str',
-    traits     => ['NoGetopt'],
-    lazy_build => 1,
+    is      => 'rw',
+    isa     => sub { die "$_[0] is not a number!" unless $_[0] ~~ [0..100] },
+    lazy    => 1,
+    builder => '_build_cores',
 );
 
-has add_one => (
-    is            => 'ro',
-    isa           => 'Bool',
-    default       => 0,
-    traits        => [ 'Getopt', 'Bool' ],
-    cmd_aliases   => ['i'],
-    documentation => q{add one to the number of cores (useful in scripts)},
+option add_one => (
+    is      => 'rw',
+    isa     => sub { die "Invalid bool!" unless $_[0] ~~ [ 0 .. 1 ] },
+    default => sub { '0' },
+    short   => 'i',
+    doc     => q{add one to the number of cores (useful in scripts)},
 );
 
 sub _build_cores {
-    my $self = shift;
-    given ($self->os) {
-        when ('darwin') { $_ = `sysctl hw.ncpu | awk '{print \$2}'`; chomp; $_ }
-        when ('linux')  { $_ = `grep processor < /proc/cpuinfo | wc -l`; chomp; $_ }
-    }
+    do { 
+        given ($_[0]->os) {
+            when ('darwin') { $_ = `sysctl hw.ncpu | awk '{print \$2}'`;     chomp; $_ }
+            when ('linux')  { $_ = `grep processor < /proc/cpuinfo | wc -l`; chomp; $_ }
+        }
+    } or '0'
 }
 
-sub _build_os { $^O }
+around cores => sub {
+    my ($orig, $self) = (shift, shift);
 
-around 'cores' => sub {
-    my ($orig, $self, $set) = @_;
-    return $self->$orig() + 1 if $self->add_one and not defined $set;
-    return $self->$orig(); # otherwise
+    return $self->$orig() + 1 if $self->add_one;
+    return $self->$orig();
 };
 
+no Moo;
 
-no Any::Moose;
-
-__PACKAGE__->meta->make_immutable();
 
 
 __END__
@@ -79,13 +69,15 @@ App::OS::Detect::MachineCores - Detect how many cores your machine has (OS-indep
 
 =head1 VERSION
 
-version 0.020
+version 0.035
 
 =head1 SYNOPSIS
 
 On different system, different approaches are needed to detect the number of cores for that machine.
 
 This Module is a wrapper around these different approaches.
+
+=for Pod::Coverage os cores _build_cores add_one
 
 =head1 USAGE
 
@@ -94,8 +86,8 @@ This module will install one executable, C<<< mcores >>>, in your bin.
 It is really simple and straightforward:
 
      usage: mcores [-?i] [long options...]
-         -? --usage --help  Prints this usage information.
-         -i --add-one       add one to the number of cores (useful in scripts)
+         -h --help       Prints this usage information.
+         -i --add_one    add one to the number of cores (useful in scripts)
 
 =head1 SUPPORTED SYSTEMS
 
@@ -121,23 +113,17 @@ Example:
 
      export TEST_JOBS=`mcores -i`
 
-=head1 WARNING
-
-Some questions with Dist::Zilla are still open, and although this module attempts to load L<Mouse> instead of L<Moose>,
-unfortuantely, however, B<both> modules are installed as prerequisites. This will change soon.
-
-=cut
-
 =head1 AUTHOR
 
 Daniel B. <dbr@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Daniel B..
+This software is Copyright (c) 2012 by Daniel B..
 
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
+This is free software, licensed under:
+
+  DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE, Version 2, December 2004
 
 =cut
 

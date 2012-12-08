@@ -17,18 +17,14 @@ else {
 }
 
 my @modules = qw(
-  Any::Moose
   Carp
   ExtUtils::MakeMaker
   File::Spec::Functions
   FindBin
   List::Util
   Module::Build
-  MooseX::Getopt
-  MooseX::Getopt::Dashes
-  MouseX::Getopt
-  MouseX::Getopt::Dashes
-  MouseX::NativeTraits
+  Moo
+  MooX::Options
   Scalar::Util
   Test::CheckDeps
   Test::More

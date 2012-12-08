@@ -2,7 +2,7 @@ NAME
     mcores - Executable for App::OS::Detect::MachineCores
 
 VERSION
-    version 0.020
+    version 0.035
 
 SYNOPSIS
     On different systems, different approaches are needed to detect the
@@ -14,17 +14,13 @@ USAGE
     This is the executable to App::OS::Detect::MachineCores, please see the
     documentation there for usage.
 
-WARNING
-    Some questions with Dist::Zilla are still open, and although this module
-    attempts to load Mouse instead of Moose, unfortuantely, however, both
-    modules are installed as prerequisites. This will change soon.
-
 AUTHOR
     Daniel B. <dbr@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2012 by Daniel B..
+    This software is Copyright (c) 2012 by Daniel B..
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software, licensed under:
+
+      DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE, Version 2, December 2004
 

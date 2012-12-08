@@ -16,8 +16,8 @@ configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300017, CPAN::Meta::Converter version 2.120921'
-license: perl
+generated_by: 'Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921'
+license: unrestricted
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -25,18 +25,14 @@ name: App-OS-Detect-MachineCores
 provides:
   App::OS::Detect::MachineCores:
     file: lib/App/OS/Detect/MachineCores.pm
-    version: 0.020
+    version: 0.035
 requires:
-  Any::Moose: 0
   FindBin: 0
-  MooseX::Getopt: 0
-  MooseX::Getopt::Dashes: 0
-  MouseX::Getopt: 0
-  MouseX::Getopt::Dashes: 0
-  MouseX::NativeTraits: 0
+  Moo: 0
+  MooX::Options: 0
   perl: 5.010
   strict: 0
   true: 0
   warnings: 0
-version: 0.020
+version: 0.035
 x_authority: cpan:DBR
