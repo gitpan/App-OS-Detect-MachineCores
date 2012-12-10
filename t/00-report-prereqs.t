@@ -25,9 +25,13 @@ my @modules = qw(
   Module::Build
   Moo
   MooX::Options
+  Pod::Coverage::TrustPod
   Scalar::Util
+  Test::CPAN::Meta
   Test::CheckDeps
   Test::More
+  Test::Pod
+  Test::Pod::Coverage
   Test::UseAllModules
   perl
   strict

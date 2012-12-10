@@ -4,7 +4,7 @@
       "Daniel B. <dbr@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "unrestricted"
    ],
@@ -23,6 +23,14 @@
          "requires" : {
             "ExtUtils::MakeMaker" : "6.30",
             "Module::Build" : "0.3601"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Coverage::TrustPod" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::Pod" : "1.41",
+            "Test::Pod::Coverage" : "1.08"
          }
       },
       "runtime" : {
@@ -52,11 +60,11 @@
    "provides" : {
       "App::OS::Detect::MachineCores" : {
          "file" : "lib/App/OS/Detect/MachineCores.pm",
-         "version" : "0.036"
+         "version" : "0.037"
       }
    },
    "release_status" : "stable",
-   "version" : "0.036",
+   "version" : "0.037",
    "x_authority" : "cpan:DBR"
 }
 
