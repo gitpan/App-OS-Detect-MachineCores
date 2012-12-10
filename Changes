@@ -1,0 +1,6 @@
+0.036
+    * Moo-ified distribution (from Any::Moose / ::Mouse)
+        * thus doesn't install both, Moose _and_ Mouse through Dist::Zilla
+    * (Introduced this changes file)
+0.200
+    * (Version before changes file was existent)
