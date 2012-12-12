@@ -2,7 +2,7 @@ NAME
     mcores - Executable for App::OS::Detect::MachineCores
 
 VERSION
-    version 0.037
+    version 0.038
 
 SYNOPSIS
     On different systems, different approaches are needed to detect the

@@ -60,11 +60,11 @@
    "provides" : {
       "App::OS::Detect::MachineCores" : {
          "file" : "lib/App/OS/Detect/MachineCores.pm",
-         "version" : "0.037"
+         "version" : "0.038"
       }
    },
    "release_status" : "stable",
-   "version" : "0.037",
+   "version" : "0.038",
    "x_authority" : "cpan:DBR"
 }
 

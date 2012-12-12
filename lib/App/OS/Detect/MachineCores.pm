@@ -3,7 +3,7 @@ BEGIN {
   $App::OS::Detect::MachineCores::AUTHORITY = 'cpan:DBR';
 }
 {
-  $App::OS::Detect::MachineCores::VERSION = '0.037';
+  $App::OS::Detect::MachineCores::VERSION = '0.038';
 }
 
 #  PODNAME: App::OS::Detect::MachineCores
@@ -69,7 +69,7 @@ App::OS::Detect::MachineCores - Detect how many cores your machine has (OS-indep
 
 =head1 VERSION
 
-version 0.037
+version 0.038
 
 =head1 SYNOPSIS
 

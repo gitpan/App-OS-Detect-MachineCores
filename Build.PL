@@ -26,7 +26,7 @@ my %module_build_args = (
     "Daniel B. <dbr\@cpan.org>"
   ],
   "dist_name" => "App-OS-Detect-MachineCores",
-  "dist_version" => "0.037",
+  "dist_version" => "0.038",
   "license" => "unrestricted",
   "module_name" => "App::OS::Detect::MachineCores",
   "recommends" => {},
