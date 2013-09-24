@@ -1,6 +1,5 @@
 Build.PL
 Changes
-Debian_CPANTS.txt
 INSTALL
 LICENSE
 MANIFEST
@@ -15,11 +14,16 @@ t/00-check-deps.t
 t/00-load.t
 t/00-report-prereqs.t
 t/000-report-versions.t
+t/basic.t
 weaver.ini
+xt/release/changes_has_content.t
+xt/release/check-manifest.t
 xt/release/common_spelling.t
 xt/release/distmeta.t
 xt/release/eol.t
+xt/release/has-version.t
 xt/release/minimum-version.t
 xt/release/no-tabs.t
 xt/release/pod-coverage.t
 xt/release/pod-syntax.t
+xt/release/portability.t

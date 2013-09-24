@@ -3,20 +3,19 @@ abstract: 'Executable for App::OS::Detect::MachineCores'
 author:
   - 'Daniel B. <dbr@cpan.org>'
 build_requires:
-  Carp: 0
   ExtUtils::MakeMaker: 0
   File::Spec::Functions: 0
   List::Util: 0
   Module::Build: 0.3601
   Scalar::Util: 0
-  Test::CheckDeps: 0.002
+  Test::CheckDeps: 0.006
   Test::More: 0.94
   Test::UseAllModules: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921'
 license: unrestricted
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,14 +24,17 @@ name: App-OS-Detect-MachineCores
 provides:
   App::OS::Detect::MachineCores:
     file: lib/App/OS/Detect/MachineCores.pm
-    version: 0.038
+    version: v1.0.0
 requires:
+  Carp: 0
   FindBin: 0
   Moo: 0
   MooX::Options: 0
-  perl: 5.010
+  lib: 0
+  perl: v5.10.0
   strict: 0
   true: 0
   warnings: 0
-version: 0.038
+resources: {}
+version: 1.0.0
 x_authority: cpan:DBR

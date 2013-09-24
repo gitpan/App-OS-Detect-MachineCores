@@ -4,7 +4,7 @@
       "Daniel B. <dbr@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "unrestricted"
    ],
@@ -35,10 +35,12 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
             "FindBin" : "0",
             "Moo" : "0",
             "MooX::Options" : "0",
-            "perl" : "5.010",
+            "lib" : "0",
+            "perl" : "v5.10.0",
             "strict" : "0",
             "true" : "0",
             "warnings" : "0"
@@ -46,12 +48,11 @@
       },
       "test" : {
          "requires" : {
-            "Carp" : "0",
             "ExtUtils::MakeMaker" : "0",
             "File::Spec::Functions" : "0",
             "List::Util" : "0",
             "Scalar::Util" : "0",
-            "Test::CheckDeps" : "0.002",
+            "Test::CheckDeps" : "0.006",
             "Test::More" : "0.94",
             "Test::UseAllModules" : "0"
          }
@@ -60,11 +61,12 @@
    "provides" : {
       "App::OS::Detect::MachineCores" : {
          "file" : "lib/App/OS/Detect/MachineCores.pm",
-         "version" : "0.038"
+         "version" : "v1.0.0"
       }
    },
    "release_status" : "stable",
-   "version" : "0.038",
+   "resources" : {},
+   "version" : "1.0.0",
    "x_authority" : "cpan:DBR"
 }
 

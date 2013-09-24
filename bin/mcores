@@ -15,8 +15,8 @@ use App::OS::Detect::MachineCores;
 
 say App::OS::Detect::MachineCores->new_with_options->cores;
 
-
 __END__
+
 =pod
 
 =encoding utf-8
@@ -27,7 +27,7 @@ mcores - Executable for App::OS::Detect::MachineCores
 
 =head1 VERSION
 
-version 0.038
+version 1.0.0
 
 =head1 SYNOPSIS
 
@@ -52,4 +52,3 @@ This is free software, licensed under:
   DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE, Version 2, December 2004
 
 =cut
-
