@@ -18,7 +18,7 @@ my %module_build_args = (
     "Daniel B. <dbr\@cpan.org>"
   ],
   "dist_name" => "App-OS-Detect-MachineCores",
-  "dist_version" => "1.0.0",
+  "dist_version" => "1.1.2",
   "license" => "unrestricted",
   "module_name" => "App::OS::Detect::MachineCores",
   "recommends" => {},
@@ -29,7 +29,7 @@ my %module_build_args = (
     "Moo" => 0,
     "MooX::Options" => 0,
     "lib" => 0,
-    "perl" => "v5.10.0",
+    "perl" => "5.010",
     "strict" => 0,
     "true" => 0,
     "warnings" => 0

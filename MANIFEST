@@ -7,6 +7,7 @@ META.json
 META.yml
 Makefile.PL
 README
+README.md
 bin/mcores
 dist.ini
 lib/App/OS/Detect/MachineCores.pm
@@ -19,6 +20,7 @@ weaver.ini
 xt/release/changes_has_content.t
 xt/release/check-manifest.t
 xt/release/common_spelling.t
+xt/release/cpan-changes.t
 xt/release/distmeta.t
 xt/release/eol.t
 xt/release/has-version.t

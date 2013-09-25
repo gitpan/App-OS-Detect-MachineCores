@@ -24,17 +24,19 @@ name: App-OS-Detect-MachineCores
 provides:
   App::OS::Detect::MachineCores:
     file: lib/App/OS/Detect/MachineCores.pm
-    version: v1.0.0
+    version: v1.1.2
 requires:
   Carp: 0
   FindBin: 0
   Moo: 0
   MooX::Options: 0
   lib: 0
-  perl: v5.10.0
+  perl: 5.010
   strict: 0
   true: 0
   warnings: 0
-resources: {}
-version: 1.0.0
+resources:
+  homepage: https://github.com/xdbr/App-OS-Detect-MachineCores
+  repository: https://github.com/xdbr/App-OS-Detect-MachineCores.git
+version: 1.1.2
 x_authority: cpan:DBR
